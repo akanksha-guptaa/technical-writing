@@ -12,7 +12,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-  })
+  }),
 );
 
 // Smooth scrolling for navigation links
@@ -83,7 +83,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animation
 document.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll(
-    ".project-card, .timeline-item, .about-content"
+    ".project-card, .timeline-item, .about-content",
   );
   animatedElements.forEach((el) => {
     observer.observe(el);
@@ -369,3 +369,6 @@ document
       cursor.style.backgroundColor = "transparent";
     });
   });
+
+//Printing current year
+document.querySelector(".currentYear").innerHTML = new Date().getFullYear();
